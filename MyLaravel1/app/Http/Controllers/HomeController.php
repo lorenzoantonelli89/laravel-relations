@@ -38,7 +38,7 @@ class HomeController extends Controller
         $validate = $request -> validate([
             'model' => 'required|string|min:3',
             'kW' => 'required|integer|min:70|max:400',
-            
+            'brand_id' => 'required|exists:brands,id|integer',
         ]);
         
         $brand = Brand::findOrFail($request -> get('brand_id'));
