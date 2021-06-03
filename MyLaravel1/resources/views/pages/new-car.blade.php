@@ -19,7 +19,7 @@
                         Model
                     </label>
                 </div>
-                <input type="text" name="model">
+                <input type="text" name="model" require>
             </div>
             <div>
                 <div class="container-label">
@@ -27,7 +27,7 @@
                         kW
                     </label>
                 </div>
-                <input type="number" name="kW">
+                <input type="number" name="kW" require>
             </div>
             <div>
                 <div class="container-label">
@@ -35,8 +35,8 @@
                         Brand
                     </label>
                 </div>
-                <select name="brand_id" id="brand_id">
-                    <option select disabled>
+                <select name="brand_id" id="brand_id" require>
+                    <option selected disabled>
                         Select Brand
                     </option>
                     @foreach ($brands as $brand)
@@ -45,6 +45,16 @@
                         </option>
                     @endforeach
                 </select>
+            </div>
+            <div>
+                <ul id="container-pilot">
+                    @foreach ($pilots as $pilot)
+                        <li>
+                            <input type="checkbox" name="pilots_id[]" value="{{$pilot -> id}}">
+                            <label for="pilots_id[]">{{$pilot -> firstname}} {{$pilot -> lastname}}</label>
+                        </li>
+                    @endforeach
+                </ul>
             </div>
             <div id="submit">
                 <input type="submit" value="Create Car">

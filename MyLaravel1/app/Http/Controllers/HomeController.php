@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Car;
 use App\Brand;
+use App\Pilot;
 
 class HomeController extends Controller
 {
@@ -26,8 +27,9 @@ class HomeController extends Controller
     public function newCar(){
 
         $brands = Brand::all();
+        $pilots = Pilot::all();
 
-        return view('pages.new-car', compact('brands'));
+        return view('pages.new-car', compact('brands', 'pilots'));
 
     }
 
@@ -46,8 +48,8 @@ class HomeController extends Controller
         $car -> brand() -> associate($brand);
         $car -> save();
 
-        // $car -> pilots() -> attach($request -> get('pilots_id'));
-        // $car -> save();
+        $car -> pilots() -> attach($request -> get('pilots_id'));
+        $car -> save();
 
         return redirect() -> route('home');
 

@@ -80,6 +80,11 @@ div#container main form #brand_id {
   padding: 15px 70px;
 }
 
+div#container main form #container-pilot {
+  list-style: none;
+  margin: 20px 0;
+}
+
 body {
   background-color: lightblue;
 }
