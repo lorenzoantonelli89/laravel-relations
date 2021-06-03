@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+div#container main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+div#container main h1 {
+  color: green;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 30px 0;
+}
+
+div#container main table {
+  width: 70%;
+  border-collapse: collapse;
+  margin: 50px 0;
+}
+
+div#container main table th,
+div#container main table td {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 10px 60px;
+}
+
+div#container main table th {
+  text-transform: uppercase;
+}
+
+div#container main table td {
+  color: #fff;
+}
+
+div#container main table td a {
+  text-decoration: none;
+  color: #fff;
+}
+
+div#container main #newCar {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffff;
+  background-color: indigo;
+  padding: 10px 30px;
+  border-radius: 10px;
+}
+
+div#container main #backHome {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: indigo;
+  background-color: #ffff;
+  padding: 10px 30px;
+  border-radius: 10px;
+}
+
+div#container main form div.container-label {
+  text-align: center;
+  margin: 20px 0;
+}
+
+div#container main form input {
+  padding: 15px 45px;
+}
+
+div#container main form div#submit {
+  text-align: center;
+  margin-top: 30px;
+}
+
+div#container main form #brand_id {
+  padding: 15px 70px;
+}
+
+body {
+  background-color: lightblue;
+}
+
+body div#container header,
+body div#container footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+body div#container header h1 {
+  text-transform: uppercase;
+  color: orange;
+}
+
+body div#container footer h3 {
+  text-transform: uppercase;
+  color: purple;
+}
+

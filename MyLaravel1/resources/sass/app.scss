@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import 'partials/variables';
+@import 'partials/home';
+@import 'partials/new-car';
+
+
+body{
+    background-color: lightblue;
+
+    div#container{
+
+        header, footer{
+            @include flex(row, center, center);
+            margin-top: 50px;
+        }
+        
+        header{
+
+            h1{
+                text-transform: uppercase;
+                color: orange;
+            }
+        }
+
+        footer{
+           
+            h3{
+                text-transform: uppercase;
+                color: purple;
+            }
+        }
+    }
+}
